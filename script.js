@@ -8,7 +8,7 @@ const shuffleButton = document.getElementById("shuffle");
 const allSongs = [
   {
     id: 0,
-    title: "AC/DC - Highway to Hell",
+    title: "AC/DC - BACK IN BLACK",
     artist: "AC/DC ",
     duration: "X",
     src: "https://drive.google.com/file/d/1F82Rg20IDjAnexfmFIW_dMYE5nsfvmNZ/view?usp=drive_link",
