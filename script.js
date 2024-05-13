@@ -11,7 +11,7 @@ const allSongs = [
     title: "AC/DC - Highway to Hell",
     artist: "AC/DC ",
     duration: "X",
-    src: "./musica/ACDC - Highway to Hell.mp3",
+    src: "https://drive.google.com/file/d/1F82Rg20IDjAnexfmFIW_dMYE5nsfvmNZ/view?usp=drive_link",
   },
   {
     id: 1,
