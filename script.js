@@ -93,7 +93,7 @@ let userData = {
   songCurrentTime: 0,
 };
 
-const playSong = (id) => {
+/*const playSong = (id) => {
   const song = userData?.songs.find((song) => song.id === id);
   audio.src = song.src;
   audio.title = song.title;
@@ -110,7 +110,7 @@ const playSong = (id) => {
   setPlayerDisplay();
   setPlayButtonAccessibleText();
   audio.play();
-};
+};*/
 
 const pauseSong = () => {
   userData.songCurrentTime = audio.currentTime;
@@ -283,3 +283,24 @@ setPlayButtonAccessibleText()
 
 renderSongs(userData?.songs);
 setPlayButtonAccessibleText();
+
+const playSong = (id) => {
+  if (!userData || !userData.songs || userData.songs.length === 0) {
+    console.error('No se ha proporcionado userData o songs no está definido o está vacío.');
+    return;
+  }
+
+  const song = userData.songs.find((song) => song.id === id);
+  if (!song) {
+    console.error('No se encontró una canción con el ID proporcionado.');
+    return;
+  }
+
+  if (!audio || !(audio instanceof HTMLAudioElement)) {
+    console.error('El elemento audio no está definido o no es un elemento de audio válido.');
+    return;
+  }
+
+  audio.src = song.src;
+  audio.title = song.title;
+};
